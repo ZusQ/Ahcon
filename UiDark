@@ -1,0 +1,358 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Shit = Instance.new("Frame")
+local LogoHub = Instance.new("ImageLabel")
+local NameHUb = Instance.new("TextLabel")
+local Desc = Instance.new("TextLabel")
+local Time = Instance.new("TextLabel")
+local status = Instance.new("TextLabel")
+local moon = Instance.new("TextLabel")
+local Niger = Instance.new("TextLabel")
+local List = Instance.new("Frame")
+local AnhCuaItem2 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local UICorner_44 = Instance.new("UICorner")
+local Logo = Instance.new("ImageLabel")
+local UICorner_5 = Instance.new("UICorner")
+local AnhCuaItem3 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local UIStroke_6 = Instance.new("UIStroke")
+local Logo_2 = Instance.new("ImageLabel")
+local UICorner_99 = Instance.new("UICorner")
+local Chucnanglogo = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local UIStroke_7 = Instance.new("UIStroke")
+local Logo_3 = Instance.new("ImageLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Niger_2 = Instance.new("TextLabel")
+local CheckFrame = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local Circle = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local LogoH = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local LogoHub_2 = Instance.new("ImageLabel")
+local UIStroke_5 = Instance.new("UIStroke")
+local UIStroke_8 = Instance.new("UIStroke")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.IgnoreGuiInset = true
+
+Shit.Name = "Shit"
+Shit.Parent = ScreenGui
+Shit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shit.BackgroundTransparency = 0.200
+Shit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shit.BorderSizePixel = 0
+Shit.Size = UDim2.new(1, 0, 1, 0)
+
+LogoHub.Name = "Logo Hub"
+LogoHub.Parent = Shit
+LogoHub.AnchorPoint = Vector2.new(0.5, 0.5)
+LogoHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoHub.BackgroundTransparency = 1.000
+LogoHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LogoHub.BorderSizePixel = 0
+LogoHub.Position = UDim2.new(0.5, 0, 0.449999988, 0)
+LogoHub.Size = UDim2.new(0, 140, 0, 140)
+LogoHub.Image = "http://www.roblox.com/asset/?id=88343544016275"
+
+NameHUb.Name = "Name HUb"
+NameHUb.Parent = Shit
+NameHUb.AnchorPoint = Vector2.new(0.5, 0.5)
+NameHUb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameHUb.BackgroundTransparency = 1.000
+NameHUb.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NameHUb.BorderSizePixel = 0
+NameHUb.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+NameHUb.Size = UDim2.new(0, 200, 0, 50)
+NameHUb.Font = Enum.Font.GothamBold
+NameHUb.Text = "Vxeze Hub"
+NameHUb.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameHUb.TextSize = 20.000
+
+Desc.Name = "Desc"
+Desc.Parent = NameHUb
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Desc.BorderSizePixel = 0
+Desc.Position = UDim2.new(1, -50, 0, 10)
+Desc.Size = UDim2.new(0, 50, 0, 20)
+Desc.Font = Enum.Font.GothamBold
+Desc.Text = "(Premium)"
+Desc.TextColor3 = Color3.fromRGB(144, 144, 144)
+Desc.TextSize = 11.000
+starttime = tick()
+function GetElapsedTime(cc)
+    local elapsedTime = tick() - cc
+    local hours = math.floor(elapsedTime / 3600)
+    local minutes = math.floor((elapsedTime % 3600) / 60)
+    local seconds = math.floor(elapsedTime % 60)
+    local timeString = string.format("%d Hours %d Minutes %d Seconds", hours, minutes, seconds)
+    return timeString
+end
+Time.Name = "Time"
+Time.Parent = Shit
+Time.AnchorPoint = Vector2.new(0.5, 0.5)
+Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Time.BackgroundTransparency = 1.000
+Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Time.BorderSizePixel = 0
+Time.Position = UDim2.new(0.5, 0, 0.150000006, 0)
+Time.Size = UDim2.new(0, 300, 0, 29)
+Time.Font = Enum.Font.GothamBold
+Time.Text = "0 Hours 0 Minutes 0 Seconds"
+Time.TextColor3 = Color3.fromRGB(200, 200, 200)
+Time.TextSize = 11.000
+spawn(function()
+    while task.wait() do
+        Time.Text = GetElapsedTime(starttime)
+    end
+end)
+status.Name = "status"
+status.Parent = Shit
+status.AnchorPoint = Vector2.new(0.5, 0.5)
+status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+status.BackgroundTransparency = 1.000
+status.BorderColor3 = Color3.fromRGB(0, 0, 0)
+status.BorderSizePixel = 0
+status.Position = UDim2.new(0.5, 0, 0.200000003, 0)
+status.Size = UDim2.new(0, 200, 0, 29)
+status.Font = Enum.Font.GothamBold
+status.Text = "Status :"
+status.TextColor3 = Color3.fromRGB(255, 255, 255)
+status.TextSize = 12.000
+
+moon.Name = "moon"
+moon.Parent = Shit
+moon.AnchorPoint = Vector2.new(0.5, 0.5)
+moon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+moon.BackgroundTransparency = 1.000
+moon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+moon.BorderSizePixel = 0
+moon.Position = UDim2.new(0.5, 0, 0.25, 0)
+moon.Size = UDim2.new(0, 200, 0, 29)
+moon.Font = Enum.Font.GothamBold
+moon.Text = "discord.gg/vxezehub"
+moon.TextColor3 = Color3.fromRGB(200, 200, 200)
+moon.TextSize = 11.000
+
+Niger.Name = "Niger"
+Niger.Parent = Shit
+Niger.AnchorPoint = Vector2.new(0.5, 0.5)
+Niger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Niger.BackgroundTransparency = 1.000
+Niger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Niger.BorderSizePixel = 0
+Niger.Position = UDim2.new(0.5, 0, 0.685554028, 0)
+Niger.Size = UDim2.new(0, 500, 0, 36)
+Niger.RichText = true
+Niger.Font = Enum.Font.GothamBold
+Niger.Text = "Player: " .. game.Players.LocalPlayer.Name .." | Level " .. game.Players.LocalPlayer.Data.Level.Value .. " | <font color='rgb(255, 255, 255)'>" .. game.Players.LocalPlayer.Data.Beli.Value .. " Beli</font> | <font color = 'rgb(207, 207, 207)'>" .. game.Players.LocalPlayer.Data.Fragments.Value .. " Fragments</font>"
+Niger.TextColor3 = Color3.fromRGB(232, 232, 232)
+Niger.TextSize = 13.000
+
+List.Name = "List"
+List.Parent = Shit
+List.AnchorPoint = Vector2.new(0.5, 0.5)
+List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+List.BackgroundTransparency = 1.000
+List.BorderColor3 = Color3.fromRGB(0, 0, 0)
+List.BorderSizePixel = 0
+List.Position = UDim2.new(0.52, 0, 0.85, 0)
+List.Size = UDim2.new(0, 200, 0, 50)
+
+AnhCuaItem2.Name = "AnhCuaItem2"
+AnhCuaItem2.Parent = List
+AnhCuaItem2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnhCuaItem2.BackgroundTransparency = 1.000
+AnhCuaItem2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AnhCuaItem2.BorderSizePixel = 0
+AnhCuaItem2.Size = UDim2.new(0, 48, 0, 50)
+
+UICorner_99.CornerRadius = UDim.new(1, 0)
+UICorner_99.Parent = AnhCuaItem2
+
+UIStroke_8.Parent = AnhCuaItem2
+UIStroke_8.Color = Color3.fromRGB(144, 144, 144)
+
+Logo.Name = "Logo"
+Logo.Parent = AnhCuaItem2
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Size = UDim2.new(1, 0, 1, 0)
+Logo.Image = "http://www.roblox.com/asset/?id=139195444249249"
+
+UICorner_11.CornerRadius = UDim.new(1, 0)
+UICorner_11.Parent = Logo
+
+AnhCuaItem3.Name = "AnhCuaItem3"
+AnhCuaItem3.Parent = List
+AnhCuaItem3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnhCuaItem3.BackgroundTransparency = 1.000
+AnhCuaItem3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AnhCuaItem3.BorderSizePixel = 0
+AnhCuaItem3.Position = UDim2.new(0, 63, 0, 0)
+AnhCuaItem3.Size = UDim2.new(0, 48, 0, 50)
+
+UICorner_10.CornerRadius = UDim.new(1, 0)
+UICorner_10.Parent = AnhCuaItem3
+
+UIStroke_7.Parent = AnhCuaItem3
+UIStroke_7.Color = Color3.fromRGB(144, 144, 144)
+
+Logo_2.Name = "Logo"
+Logo_2.Parent = AnhCuaItem3
+Logo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo_2.BackgroundTransparency = 1.000
+Logo_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo_2.BorderSizePixel = 0
+Logo_2.Size = UDim2.new(1, 0, 1, 0)
+Logo_2.Image = "http://www.roblox.com/asset/?id=136825743985669"
+
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = Logo_2
+
+Chucnanglogo.Name = "Chucnanglogo"
+Chucnanglogo.Parent = List
+Chucnanglogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Chucnanglogo.BackgroundTransparency = 1.000
+Chucnanglogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Chucnanglogo.BorderSizePixel = 0
+Chucnanglogo.Position = UDim2.new(0, 128, 0, 0)
+Chucnanglogo.Size = UDim2.new(0, 48, 0, 50)
+
+UICorner_44.CornerRadius = UDim.new(1, 0)
+UICorner_44.Parent = Chucnanglogo
+
+UIStroke_6.Parent = Chucnanglogo
+UIStroke_6.Color = Color3.fromRGB(144, 144, 144)
+
+Logo_3.Name = "Logo"
+Logo_3.Parent = Chucnanglogo
+Logo_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo_3.BackgroundTransparency = 1.000
+Logo_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo_3.BorderSizePixel = 0
+Logo_3.Size = UDim2.new(1, 0, 1, 0)
+Logo_3.Image = "http://www.roblox.com/asset/?id=100474270866565"
+
+UICorner_9.CornerRadius = UDim.new(1, 0)
+UICorner_9.Parent = Logo_3
+
+Niger_2.Name = "Niger"
+Niger_2.Parent = Shit
+Niger_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Niger_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Niger_2.BackgroundTransparency = 1.000
+Niger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Niger_2.BorderSizePixel = 0
+Niger_2.Position = UDim2.new(0.5, 0, 0.714999974, 9)
+Niger_2.Size = UDim2.new(0, 500, 0, 36)
+Niger_2.Font = Enum.Font.GothamBold
+Niger_2.Text = "Status: Dark Beard"
+Niger_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Niger_2.TextSize = 12.000
+
+CheckFrame.Name = "CheckFrame"
+CheckFrame.Parent = ScreenGui
+CheckFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CheckFrame.BackgroundTransparency = 0
+CheckFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CheckFrame.BorderSizePixel = 0
+CheckFrame.Position = UDim2.new(0.05, 0, 0.35, 0)
+CheckFrame.Size = UDim2.new(0, 45, 0, 20)
+
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = CheckFrame
+
+UIStroke_4.Parent = CheckFrame
+UIStroke_4.Color = Color3.fromRGB(0, 0, 0)
+UIStroke_4.Thickness = 2.000
+
+Circle.Name = "Circle"
+Circle.Parent = CheckFrame
+Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Circle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Circle.BorderSizePixel = 0
+Circle.Position = UDim2.new(0, 25, 0, 2)
+Circle.Size = UDim2.new(0, 16, 0, 16)
+
+UICorner_8.Parent = Circle
+
+TextButton.Parent = CheckFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.Activated:Connect(function()
+    if Shit.Visible == false then
+        CheckFrame.BackgroundTransparency = 0
+        Circle.Position = UDim2.new(0, 25, 0, 2)
+        UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+        Shit.Visible = true
+    else
+        CheckFrame.BackgroundTransparency = 1.000
+        Circle.Position = UDim2.new(0, 2, 0, 2)
+        UIStroke_4.Color = Color3.fromRGB(190, 190, 190)
+        Shit.Visible = false
+    end
+end)
+
+LogoH.Name = "LogoH"
+LogoH.Parent = ScreenGui
+LogoH.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+LogoH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LogoH.BorderSizePixel = 0
+LogoH.Position = UDim2.new(0.05, 0, 0.2, 0)
+LogoH.Size = UDim2.new(0, 45, 0, 45)
+
+UICorner_9.CornerRadius = UDim.new(1, 0)
+UICorner_9.Parent = LogoH
+
+LogoHub_2.Name = "Logo Hub"
+LogoHub_2.Parent = LogoH
+LogoHub_2.AnchorPoint = Vector2.new(0.5, 0.5)
+LogoHub_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoHub_2.BackgroundTransparency = 1.000
+LogoHub_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LogoHub_2.BorderSizePixel = 0
+LogoHub_2.Position = UDim2.new(0.5, 1, 0.5, 0)
+LogoHub_2.Size = UDim2.new(1, 0, 1, 0)
+LogoHub_2.Image = "rbxassetid://91347148253026"
+local UICorner_99 = Instance.new('UICorner')
+UICorner_99.CornerRadius = UDim.new(1, 0)
+UICorner_99.Parent = LogoHub_2
+
+local VirusS = Instance.new("TextButton")
+VirusS.Name = "VirusS"
+VirusS.Parent = LogoH
+VirusS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VirusS.BackgroundTransparency = 1.000
+VirusS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VirusS.BorderSizePixel = 0
+VirusS.Size = UDim2.new(1, 0, 1, 0)
+VirusS.Font = Enum.Font.SourceSans
+VirusS.Text = ""
+VirusS.TextColor3 = Color3.fromRGB(0, 0, 0)
+VirusS.TextSize = 14.000
+VirusS.Activated:Connect(function()
+    Shit.Visible = not Shit.Visible
+end)
+
+UIStroke_5.Parent = LogoH
+UIStroke_5.Color = Color3.fromRGB(144, 144, 144)
+function SetStatus(a)
+    status.Text = "Status : " .. a
+end
+function SetBossName(aa)
+    niger_2.Text = aa .. " :"
+end
